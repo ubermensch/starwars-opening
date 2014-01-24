@@ -18,6 +18,7 @@
                 <div id="crawling-txt">
                     <div class="text">
                         <div class="inner-txt">
+                            <p class="spacer"></p>
                             <p class="episode">Episode XXXIII</p>
                             <!--<p class="subtitle">That's a lotta ballsack, Steve. Sure you can handle it?</p>-->
                             <p class="subtitle">Steve loves balls</p>
@@ -66,7 +67,7 @@
                 if (audio == null || !audio.canPlayType) {
                     done('problem');
                     return;
-                } 
+                }
 
                 if (audio.canPlayType('audio/mpeg')) {
                     audio.src = 'audio/intro.mp3';

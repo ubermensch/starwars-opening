@@ -1,10 +1,10 @@
 @font-face {
   font-family: "SWCrawlBodyRegular";
-  src: url("/fonts/swcrawlbody-webfont.eot");
-  src: url("/fonts/swcrawlbody-webfont.eot?#iefix") format("embedded-opentype"),
-       url("/fonts/swcrawlbody-webfont.woff") format("woff"),
-       url("/fonts/swcrawlbody-webfont.ttf") format("truetype"),
-       url("/fonts/swcrawlbody-webfont.svg#SWCrawlBodyRegular") format("svg");
+  src: url("../fonts/swcrawlbody-webfont.eot");
+  src: url("../fonts/swcrawlbody-webfont.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/swcrawlbody-webfont.woff") format("woff"),
+  url("../fonts/swcrawlbody-webfont.ttf") format("truetype"),
+  url("../fonts/swcrawlbody-webfont.svg#SWCrawlBodyRegular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,16 +34,16 @@ html {
 }
 
 .bg {
-  background: black url(/images/stars.jpg) repeat;
+  background: black url(../images/stars.jpg) repeat;
   width: 100%;
   height: 3000px;
   position: absolute;
   top: 0;
   left: 0;
-  
+
 }
 .deathstar {
-  background: black url(/images/deathstar.png) no-repeat;
+  background: black url(../images/deathstar.png) no-repeat;
   width: 655px;
   height: 663px;
   position: absolute;
@@ -53,6 +53,7 @@ html {
 
 #wrapper {
   width: 500px;
+  height: 100%;
   margin: auto;
 }
 
@@ -136,13 +137,13 @@ a {
 
 .inner-txt {
   transform: translate3d(0, 840px, 0);
-  line-height: 45px;
-  font-size: 37px;
+  line-height: 31px;
+  font-size: 30px;
   text-align: justify;
   height: 100%;
 }
 
-/* Animation definitions 
+/* Animation definitions
  * The "running" class is added to the body element once the audio is pre-loaded
  * and ready to be played by the browser. At that point we can add the css animations
  * and start them.
