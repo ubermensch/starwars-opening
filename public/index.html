@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" media="screen" href="/css/styles.css" />
+        <script src="/lib/modernizr.custom.96959.js"></script>
+        <script src="/lib/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id="loading">Loading...</div>
+        <div class="bg">
+            <div class="deathstar"></div>
+        </div>
+        <div id="supported">
+            <div id="main-title"><img src="/images/logo.svg" /></div>
+            <div id="wrapper">
+                <div id="intro">Right now, in fact. This just happened...</div>
+                <div id="crawling-txt">
+                    <div class="text">
+                        <div class="inner-txt">
+                            <p class="episode">Episode XXXIII</p>
+                            <!--<p class="subtitle">That's a lotta ballsack, Steve. Sure you can handle it?</p>-->
+                            <p class="subtitle">Steve loves balls</p>
+                            <p>
+                              First of all, there's nothing wrong with loving balls. If that's your thing,
+                              more power to you. Moderation is the key, something which Steve has always struggled with.
+                            </p>
+                            <p>
+                              I'm on your side, mate, but it's time to face facts: you're a delirious sack-fiend. I'd stage an intervention
+                              for you, only I'm worried what you'd do with that many balls in the room at once.
+                            </p>
+                            <p>
+                              At first it was subtle. A glimpse here, a brush there. It wasn't long before the unquenchable thirst for
+                              delicious vinegary testicles consumed you. You took up football, jamming your face into the nether regions
+                              of opponents and teammates alike, questing for your precious.
+                            </p>
+                            <p>Your perverted joy multiplied, and many a sunrise would crest the horizon to find you
+                              gargling sack after unwashed sack. While there were more balls to claim, your lust could not be slaked.
+                            </p>
+
+                            <p>
+                              Now, at the crescendo of your testicular zealotry, we gather to celebrate your birthday. Please, Steve, for the love of god -
+                              take a night off. HAPPY BIRTHDAY!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="unsupported">Your browser doesn't seem to support CSS 3D transforms or HTML5 audio. </div>
+        <script>
+            /**
+             * This snippet of JS code takes care of the preloading of the audio files
+             * and start the animation once the browser is ready to play
+             * the audio. That way we are sure that the audio is in sync
+             * with the animation.
+             *
+             * If the browser cannot play audio files, the animation won't run.
+            **/
+            (function() {
+                var audio = document.createElement('audio'),
+                    done = function(classname) {
+                        document.body.className = classname;
+                    };
+
+                if (audio == null || !audio.canPlayType) {
+                    done('problem');
+                    return;
+                } 
+
+                if (audio.canPlayType('audio/mpeg')) {
+                    audio.src = 'audio/intro.mp3';
+                } else if (audio.canPlayType('audio/ogg')) {
+                    audio.src = 'audio/intro.ogg';
+                    audio.preload = 'auto';
+                } else {
+                    done('problem');
+                    return;
+                }
+
+                document.body.appendChild(audio);
+
+                audio.addEventListener('canplaythrough', function () {
+                    audio.play();
+                    done('running');
+                }, false);
+
+            }());
+        </script>
+    </body>
+</html>
