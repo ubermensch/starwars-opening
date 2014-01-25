@@ -2,7 +2,7 @@
   "name": "steve_starwars",
   "version": "0.0.1",
   "description": "Bit of fun with star wars opening and insults all around!",
-  "main": "app.js",
+  "main": "app/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
