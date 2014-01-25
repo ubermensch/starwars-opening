@@ -43,12 +43,12 @@ html {
 
 }
 .deathstar {
-  background: black url(../images/deathstar.png) no-repeat;
-  width: 655px;
-  height: 663px;
+  background: black url(../images/gay_hat_mod.jpg) no-repeat;
+  width: 403px;
+  height: 558px;
   position: absolute;
-  bottom: 150px;
-  right: 100px;
+  bottom: 250px;
+  right: 200px;
 }
 
 #wrapper {
